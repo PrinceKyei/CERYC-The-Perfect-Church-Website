@@ -3,7 +3,7 @@
 A fully responsive, modern, and interactive *church website* built with *HTML, CSS, and JavaScript. 
 It combines soft gradients, cinematic video backgrounds, elegant typography, and a structured layout to deliver a clean, immersive experience.
 
-🔗 *The Website:* [View Here]()  
+🔗 *The Website:* [View Here](https://princekyei.github.io/CERYC-The-Perfect-Church-Website/)  
 
 ---
 
