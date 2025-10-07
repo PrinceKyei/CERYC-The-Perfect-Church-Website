@@ -1,11 +1,13 @@
-# ✨ Church Website — CERYC The Perfect Church
+# Church Website — CERYC The Perfect Church
 
 A fully responsive, modern, and interactive *church website* built with *HTML, CSS, and JavaScript. 
 It combines soft gradients, cinematic video backgrounds, elegant typography, and a structured layout to deliver a clean, immersive experience.
 
+🔗 *The Website:* [View Here]()  
+
 ---
 
-## 📖 Overview
+## Overview
 
 This project is a front-end website template for a church or ministry organization.  
 It includes dynamic hero sections, videos, event highlights, sermons, contact forms, and a footer with relevant links and contact info — all optimized for performance and responsiveness.
@@ -17,7 +19,7 @@ It includes dynamic hero sections, videos, event highlights, sermons, contact fo
 
 ---
 
-## 🚀 Features
+## Features
 
 ### 🎥 Hero Section
 - Autoplay background video with *dark radial fade edges*.
@@ -64,4 +66,4 @@ It includes dynamic hero sections, videos, event highlights, sermons, contact fo
 
 ---
 
-## 📁 Project Structure
+## Project Structure
