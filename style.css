@@ -404,7 +404,7 @@ nav.main-nav li ul.sub li:hover {
 }
 
 .video-item {
-    background: white;
+    background: #fff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(10, 20, 40, 0.06);
@@ -443,6 +443,7 @@ nav.main-nav li ul.sub li:hover {
     cursor: pointer;
     height: 300px;
     width: 300px;
+    grid-template-columns: (2, 1fr);
     /* consistent height */
 }
 
@@ -594,7 +595,12 @@ footer.site-footer {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .event-card {
+        grid-template-columns: 1fr;
+    }
 }
+
 
 @media (max-width:720px) {
     .hero {
@@ -652,13 +658,237 @@ footer.site-footer {
     .brand .title {
         display: none
     }
+
+    .event-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- small niceties ---------- */
+    .muted {
+        color: var(--muted)
+    }
+
+    .center {
+        text-align: center
+    }
+
+    #events .events {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #events .events-track {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        overflow: visible;
+    }
+
+    #events .event-card {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+    }
+
+    #events .event-card img {
+        height: 220px;
+    }
+
+    #events .overlay {
+        position: static;
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 1;
+        padding: 12px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .events .event-card strong {
+        font-size: large;
+    }
+
+    .events .event-card .muted {
+        color: #0f1338;
+    }
+
+    .hero-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-right .card-media {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .hero-right .card-media video {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .hero {
+        padding: 36px 18px;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero-left .hero-cta {
+        justify-content: center;
+    }
+
+    #events .events {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #events .events-track {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        overflow: visible;
+    }
+
+    #events .event-card {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+    }
+
+    #events .event-card img {
+        height: 220px;
+    }
+
+    #events .overlay {
+        position: static;
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 1;
+        padding: 12px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .events .event-card strong {
+        font-size: large;
+    }
+
+    .events .event-card .muted {
+        color: #0f1338;
+    }
+
 }
 
-/* ---------- small niceties ---------- */
-.muted {
-    color: var(--muted)
-}
 
-.center {
-    text-align: center
+
+@media (max-width:480px) {
+    .hero {
+        flex-direction: column;
+        padding: 36px 18px;
+        gap: 20px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav.main-nav>ul {
+        display: none;
+        position: absolute;
+        top: 62px;
+        left: 12px;
+        right: 12px;
+        background: white;
+        border-radius: 10px;
+        padding: 14px;
+        flex-direction: column;
+        gap: 8px;
+        box-shadow: var(--shadow)
+    }
+
+    nav.main-nav>ul.open {
+        display: flex;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem
+    }
+
+    .brand .title {
+        display: none
+    }
+
+    .event-card {
+        grid-template-columns: 1fr;
+    }
+
+    .card-media {
+        width: 100%;
+        max-width: 420px;
+        border-radius: 16px;
+        overflow: hidden;
+        background: linear-gradient(180deg, rgba(10, 123, 214, 0.06), rgba(111, 67, 245, 0.04));
+        box-shadow: var(--shadow);
+        position: relative;
+    }
+
+    .hero-right .card-media video {
+
+
+        max-height: 400px;
+        max-width: 600px;
+
+
+    }
+
+    .hero-right .card-media {
+        height: 300px;
+        width: 400px;
+    }
+
+
+
+
+
+
+
+    /* ---------- small niceties ---------- */
+    .muted {
+        color: var(--muted)
+    }
+
+    .center {
+        text-align: center
+    }
 }
