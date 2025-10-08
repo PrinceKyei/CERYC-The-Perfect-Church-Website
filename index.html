@@ -42,7 +42,6 @@
     <header>
         <div class="header-inner site">
             <div class="brand" aria-hidden="false">
-                <!-- Replace the src with your church logo -->
                 <img class="logo" src="perfect church logo.png" alt="Church logo" />
                 <div>
                     <div class="title">CERYC The Perfect Church</div>
@@ -73,7 +72,8 @@
                 <button class="btn btn-primary" id="ctaJoin">Join Us</button>
             </div>
 
-            <div class="hamburger" id="hamburger" aria-hidden="true" aria-label="Open menu" role="button" tabindex="0">
+            <!-- Hamburger only for mobile -->
+            <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" role="button" tabindex="0">
                 <span></span><span></span><span></span>
             </div>
         </div>
@@ -85,9 +85,9 @@
             <div class="hero-left">
                 <span class="eyebrow">Join us this Sunday</span>
                 <h1 id="heroTitle">A welcoming place for worship, learning, and serving God.</h1>
-                <p class="lead">Christ Embassy Royalties Youth Church, <span>The Perfect Church</span> — weekly worship,
-                    community
-                    outreach, and multimedia ministries. Everyone is welcome.</p>
+                <p class="lead">Christ Embassy Royalties Youth Church, <span>The Perfect Church</span> — weekly worship
+                    and community outreaches. Everyone is welcome.</p>
+
 
                 <div class="hero-cta">
 
@@ -114,11 +114,13 @@
                 <div>
                     <h2>About CERYC TPC</h2>
                     <p class="muted">We are a growing church focused on worship, community service, and sharing faith
-                        through hearing of the Word of God. Join a ministry or attend a service this week — everyone has
-                        a place.
+                        through hearing of the Word of God. Join a ministry or attend a service this week. Everyone has
+                        a place. Come let's worship together with our Highly Esteemed man of God — <span> Pastor Wisdom
+                            Klatsu.</span>
                     </p>
                 </div>
                 <div style="text-align:right">
+
                     <a href="#connect" class="btn btn-ghost">Plan a visit</a>
                 </div>
             </div>
@@ -347,6 +349,36 @@
     </div>
 
     <link rel="JavaScript" href="script.js">
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('#mainMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        });
+
+        // Smooth scroll between sections
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+            link.addEventListener('click', e => {
+                const targetId = link.getAttribute('href');
+                if (targetId.length > 1) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 60,
+                            behavior: 'smooth'
+                        });
+                    }
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('open');
+                }
+            });
+        });
+    </script>
 </body>
+
 
 </html>

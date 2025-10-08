@@ -197,20 +197,67 @@ nav.main-nav li ul.sub li:hover {
     box-shadow: 0 6px 24px rgba(20, 40, 80, 0.08)
 }
 
-/* hamburger */
-.hamburger {
+/* Default: desktop view */
+.menu-toggle {
     display: none;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
 }
 
-.hamburger span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #123047;
-    border-radius: 2px;
+.main-nav ul {
+    display: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    /* hide nav by default on mobile */
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 220px;
+        padding: 1rem;
+        border-radius: 8px;
+        z-index: 1000;
+    }
+
+    /* show only when toggled */
+    .main-nav ul.active {
+        display: flex;
+    }
+
+    /* hamburger visible on mobile */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        height: 3px;
+        width: 25px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Only animate when .open is added */
+    .menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
 }
 
 /* ---------- HERO ---------- */
@@ -546,7 +593,10 @@ nav.main-nav li ul.sub li:hover {
 
 
 
-
+.muted span {
+    color: #ca0303;
+    font-weight: bold;
+}
 
 
 /* CONTACT */
@@ -901,4 +951,5 @@ footer.site-footer {
     .center {
         text-align: center
     }
+
 }

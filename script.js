@@ -27,6 +27,8 @@ document.addEventListener('click', (e) => {
     }
 });
 
+
+
 /* ---------- HERO video modal ---------- */
 const videoModal = $('#videoModal');
 const openVideo = $('#open-video');
@@ -110,4 +112,5 @@ function handleFirstTab(e) {
         window.removeEventListener('keydown', handleFirstTab);
     }
 }
+
 window.addEventListener('keydown', handleFirstTab);
